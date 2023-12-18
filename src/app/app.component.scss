@@ -1,0 +1,50 @@
+.containerHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    h1 {
+        color: #1A4DA0;
+    }
+}
+
+.containerTable {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px gray;
+
+    .table {
+        .tableHeader {
+            background: #1A4DA0;
+            width: 100%;
+        }
+
+        .columAction {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: auto;
+
+            .btnDelet {
+                border: none;
+                background: transparent;
+            }
+
+            .btnEdit {
+                border: none;
+                background: transparent;
+            }
+        }
+    }
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    h1{
+        font-size: 1rem;
+    }
+}

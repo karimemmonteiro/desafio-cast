@@ -1,0 +1,26 @@
+.containerForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    gap: 10;
+    .fieldInput{
+        display: flex;
+        flex-direction: column;
+        input{
+            border-radius: 0.2rem;
+            border: 0.2px solid gray;
+            height: 2.5rem;
+        }
+    }
+    .btnCadastrar{
+        border: none;
+        background: green;
+        color: white;
+        padding: 0.5rem 2rem;
+        border-radius: 0.2rem;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+}

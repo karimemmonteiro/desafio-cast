@@ -1,0 +1,21 @@
+<div class="containerForm">
+    <div class="fieldInput">
+        <label for="name">Name: </label>
+        <div>
+            <input placeholder="EX:Panetone" id="name" type="text" [formControl]="name">
+
+        </div>
+    </div>
+    <div class="fieldInput">
+        <label for="value">Valor: </label>
+        <input placeholder="R$" id="value" type="number" [formControl]="value">
+    </div>
+
+    <div class="fieldInput">
+        <label for="amount">Quantidade: </label>
+        <input placeholder="0" id="amount" type="number" [formControl]="amount">
+    </div>
+
+
+    <button class="btnCadastrar" (click)="onInputChange()">Cadastrar</button>
+</div>
