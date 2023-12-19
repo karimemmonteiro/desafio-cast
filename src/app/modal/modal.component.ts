@@ -3,7 +3,7 @@ import { Component, inject, Input } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { NameEditorComponent } from '../Form/form.component';
+import { formComponent } from '../Form/form.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommunicationService } from '../service.comunication';
 
@@ -17,7 +17,7 @@ interface Country {
 @Component({
   selector: 'ngbd-modal-content',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FormsModule, NameEditorComponent, HttpClientModule, ReactiveFormsModule],
+  imports: [CommonModule, RouterOutlet, FormsModule, formComponent, HttpClientModule, ReactiveFormsModule],
   styleUrl: './modal.component.scss',
   template: `
 		<div class="modal-header" >
@@ -102,7 +102,7 @@ export class NgbdModalContent {
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss',
 
-  imports: [CommonModule, RouterOutlet, FormsModule, NameEditorComponent, HttpClientModule]
+  imports: [CommonModule, RouterOutlet, FormsModule, formComponent, HttpClientModule]
 })
 export class NgbdModalComponent {
   private modalService = inject(NgbModal);

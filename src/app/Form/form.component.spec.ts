@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NameEditorComponent } from './form.component';
+import { formComponent } from './form.component';
 
 describe('ModalComponent', () => {
-  let component: NameEditorComponent;
-  let fixture: ComponentFixture<NameEditorComponent>;
+  let component: formComponent;
+  let fixture: ComponentFixture<formComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NameEditorComponent]
+      imports: [formComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(NameEditorComponent);
+    fixture = TestBed.createComponent(formComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

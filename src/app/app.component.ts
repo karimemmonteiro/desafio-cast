@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { NameEditorComponent } from "./Form/form.component";
+import { formComponent } from "./Form/form.component";
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommunicationService } from './service.comunication';
 import { NgbdModalComponent, NgbdModalContent } from './modal/modal.component';
@@ -19,7 +19,7 @@ interface Country {
 	standalone: true,
 	templateUrl: './app.component.html',
 	styleUrl: './app.component.scss',
-	imports: [CommonModule, RouterOutlet, FormsModule, NameEditorComponent, HttpClientModule, NgbdModalComponent]
+	imports: [CommonModule, RouterOutlet, FormsModule, formComponent, HttpClientModule, NgbdModalComponent]
 })
 
 export class AppComponent {

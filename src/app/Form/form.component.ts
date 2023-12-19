@@ -16,7 +16,7 @@ interface Country {
   styleUrls: ['./form.component.scss'],
   imports: [ReactiveFormsModule],
 })
-export class NameEditorComponent {
+export class formComponent {
   name = new FormControl('');
   value = new FormControl();
   amount = new FormControl()
@@ -27,24 +27,20 @@ export class NameEditorComponent {
 
 
   onInputChange() {
-
-  // Função para receber o que o usuário está digitando
     const userInputName = this.name.value;
-    const userInputValue = parseFloat(this.value.value);  // Converte para número (ajuste conforme necessário)
-    const userInputAmount = parseInt(this.amount.value, 10);  // Converte para número inteiro (ajuste conforme necessário)
+    const userInputValue = parseFloat(this.value.value);
+    const userInputAmount = parseInt(this.amount.value, 10);
 
     const newCountry: Country = {
       name: userInputName,
       value: userInputValue,
       amount: userInputAmount
     };
-
-    // Envia a requisição POST
     this.http.post<Country>('https://x8ki-letl-twmt.n7.xano.io/api:XrvEIpMk/produtos', newCountry)
       .subscribe(
         (data:any) => {
           console.log('Requisição POST bem-sucedida:', data);
-          this.communicationService.notifyPostCompleted(); // Notifica o componente pai sobre o POST
+          this.communicationService.notifyPostCompleted();
           this.name.setValue('');
           this.value.setValue('');
           this.amount.setValue('');
